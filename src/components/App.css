@@ -1,0 +1,630 @@
+#root {
+  max-width: 1580px;
+  margin: 0 auto;
+  padding: 1rem 1rem; 
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  --primary-color: #145214;
+  --secondary-color: #2d862d;
+  --accent-color: #ff6b6b;
+  --text-color: #333;
+  --background-color: white;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+
+.apply-btn,
+.locate-btn {
+  flex: 1;
+  padding: 1rem; /* Increased padding for larger buttons */
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+ 
+}
+
+.apply-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.locate-btn {
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+
+/*  Loan  */
+
+.hero-section {
+  position: relative;
+  padding: 4rem 2rem;
+  color: white;
+  margin-bottom: 3rem;
+  
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.content-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+  
+}
+
+.text-content {
+  text-align: left;
+  
+  max-width: 500px;
+  margin-left: -100px; /* Shift text leftward */
+}
+
+@media screen and (min-width: 768px) {
+  .text-content {
+    left: 0;
+    margin-left: -50px; /* Push further left for larger screens */
+  }
+}
+
+.text-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  max-width: 350px; /* Ensure button group doesn't stretch */
+}
+
+.hero-section .apply-btn,
+.hero-section .locate-btn {
+  padding: 0.5rem 1rem; /* Reduce button size */
+  border: none;
+  
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero-section .apply-btn {
+  background: white;
+  color: var(--primary-color);
+}
+
+.hero-section .locate-btn {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Optional: Ensure buttons don't stretch too far 
+@media screen and (min-width: 768px) {
+  .button-group {
+    max-width: 350px; /* Limit button group width 
+  }
+}
+*/
+.app {
+ 
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.loan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns */
+  grid-auto-rows: repeat(3, auto); /* Automatic row heights */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+.funding-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, auto); /* Automatically adjust row height for 3 rows */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+.funding-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loan-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.loan-card:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.title {
+  background-color: rgb(22 163 74);
+  color: white;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.feature-section h3,
+.loan-details h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-section p,
+.loan-details p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.loan-details {
+  margin: 1rem 0;
+}
+
+.detail {
+  margin-bottom: 1rem;
+}
+
+.additional-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.action-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.explore-more {
+  color: rgb(22 163 74);
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.explore-more:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.apply-now {
+  flex: 1;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid rgb(22 163 74);
+  color: rgb(22 163 74);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.locate-us {
+  flex: 1;
+  padding: 0.5rem;
+  background: rgb(22 163 74);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.apply-now:hover,
+.locate-us:hover {
+  opacity: 0.9;
+}
+
+
+/* SHop  */ 
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* Login */
+
+.horizontal-list {
+  list-style: none; /* Removes the default dots */
+  display: flex;    /* Align items in a row */
+  align-items: center; /* Center items vertically */
+  gap: 10px;        /* Optional: Adds spacing between items */
+  padding: 0;       /* Remove default padding */
+  margin: 0;        /* Remove default margin */
+}
+
+
+
+
+/* About */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-section {
+  padding: 4rem 2rem;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  
+}
+
+.about-hero {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  
+}
+
+.stat-card {
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.image-grid:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .about-hero {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*about above*/
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section Styles */
+.hero1-section {
+  padding: 4rem 2rem;
+}
+.hero-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    url('C:/Users/hp/Downloads/farmer project/project/src/assets/loan.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #6366f1;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.description {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  color: black;
+  gap: 0.75rem;
+}
+
+.feature-icon {
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.get-started-btn {
+  background-color: #6366f1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.get-started-btn:hover {
+  background-color: #4f46e5;
+}
+
+.hero-images {
+  flex: 1;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  position: relative;
+  transition: transform 0.2s;
+  
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+}
+
+.hero-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+
+/* You can define this in your global CSS file */
+.hero-image {
+  transition: all 0.3s ease-in-out; /* Optional, adds a smooth transition */
+}
+
+.hero-image.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.hero-image:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1); /* Optional hover effect */
+}
+
+
+.image-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.image-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.image-3 {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  height: 250px;
+}
